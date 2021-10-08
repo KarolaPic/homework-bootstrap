@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <!-- CSS styles -->
+  <link href="custom.css" rel="stylesheet">
+
+</head>
+<title>Memorama</title></head>
+<body background="juego.jpg" style="background-size: cover;">
+  
+</body>
+
+  
+  <script type="text/javascript">
+
+  var entrees = new Array();
+  var celda_anterior = null;
+  var celda_anterior_id = null;
+  var correctas = 0;
+  var c = 0;
+  function mezclar()
+ {
+  var i;
+  var j;
+  var n;
+  var dep = 0;
+  var trouve;
+  for (i = 1; i < 9; i++)
+  {
+   for (j = 0; j < 2; j++) 
+   {
+    n = Math.round(Math.random() * (10 - i));
+    dep += n;
+    dep %= 16;
+    trouve = false;
+    while (!trouve) 
+    {
+     if (!entrees[dep]) 
+     {
+      entrees[dep] = i;
+      trouve = true;
+     }
+     else 
+     {
+      dep++;
+      dep %= 16;
+     }
+    }
+   }
+  }
+ }
+ mezclar();
+  window.onload = function()
+  {
+
+
+   var codigo = '<body background="juego.jpg"><nav class="navbar navbar-expand-lg navbar-dark bg-dark"><div class="container-fluid"><a class="navbar-brand" href="#">Películas y series</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarNav"><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" aria-current="page" href="dj.html">Djs</a></li><li class="nav-item"><a class="nav-link active" href="TicTacToe.html">Memorama</a></li></ul></div></div></nav><H3 style="color:white"><CENTER>Intenta resolver el memorama en el menor numero de intentos</CENTER></H3> <center><table border="1"></center><br>';
+   for (var i = 0;i < 4;i++)
+   {
+    codigo += '<tr> ';
+    for (var f = 0;f < 4;f++)
+    {  
+	
+     codigo += '<td style="border-radius:25px; width:70px;height:70px; text-align:center; background:pink  "  class="'+entrees[c]+'" id="celda_'+c+'"><a href="javascript:girar(\'celda_'+c+'\');">?</a></td><h1>';
+     c++;
+    }
+    codigo += '</tr>';
+   }
+   codigo += '</table>';
+   document.body.innerHTML = codigo;
+  }
+  function girar(celda)
+  {
+   if (celda_anterior_id != null)
+   {
+    if (celda_anterior == document.getElementById(celda).className)
+    {
+     document.getElementById(celda).innerHTML = '✔️';
+     document.getElementById(celda_anterior_id).innerHTML = '✔️';
+     celda_anterior_id = null;
+     celda_anterior = null;
+     correctas++;
+     if (correctas >= (c / 2))
+     {
+      alert("Ganaste el juego!");
+     }
+    }
+    else
+    {
+     document.getElementById(celda).innerHTML = document.getElementById(celda).className;
+     setTimeout(function()
+     {
+      document.getElementById(celda_anterior_id).innerHTML = '<a href="javascript:girar(\''+celda_anterior_id+'\')">?</a>';
+      document.getElementById(celda).innerHTML = '<a href="javascript:girar(\''+celda+'\')">?</a>';
+      alert("Intenta de nuevo!");
+      celda_anterior_id = null;
+      celda_anterior = null;
+     }, 400); 
+    }
+   }
+   else
+   {
+    celda_anterior = document.getElementById(celda).className;
+    celda_anterior_id = celda;
+    document.getElementById(celda).innerHTML = document.getElementById(celda).className;
+   }
+  }
+  </script>
+
+<style type="text/css">
+<!--
+body,td,th {
+	color: plum;
+}
+body {
+	background-color: #000000;
+}
+a:link {
+	color: #000000;
+}
+a:visited {
+	color: purple;
+}
+a:hover {
+	color: plum;
+}
+a:active {
+	color: plum;
+}
+
+</style>
+
+
+</html>

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <!-- CSS styles -->
+    <link href="custom.css" rel="stylesheet">
+
+    <title>Pelis</title>
+  </head>
+  <body background="cine.jpg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Películas y series</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="dj.html">Dj's</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="TicTacToe.html">Memorama</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="venganza.jpg" class="d-block w-100" id="img" alt="..." style="height:100vh;" >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>V for Vendetta</h5>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver más</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="robot.jpg" class="d-block w-100" id="img" alt="..." style="height:100vh;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Mr Robot</h5>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#robot">Ver más</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="rick.jpg" class="d-block w-100" id="img" alt="..." style="height:100vh;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Rick and Morty</h5>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rick">Ver más</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="breaking.png" class="d-block w-100" id="img" alt="..." style="height:100vh;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Breaking Bad</h5>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#breaking">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Modal venganza-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">V for Vendetta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="card" style="width: 90%; margin-top: 1rem; margin-left: 1rem; margin-right: 1rem">
+                <img src="venganza.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">V for Vendetta</h5>
+                  <p class="card-text">Después de una guerra mundial, Londres es un estado policiaco ocupado por un gobierno fascista. Un vigilante conocido sólo como V (Hugo Weaving) utiliza tácticas terroristas para luchar contra el estado totalitario en el que ahora vive. Cuando V salva de la policía secreta a una niña llamada Evey (Natalie Portman), él descubre una aliada en su batalla en contra de los opresores de Inglaterra.</p>
+                  <a href="https://www.warnerbroslatino.com/es-ni/peliculas/v-de-venganza" class="btn btn-primary a1" >Ver película</a>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal mr.robot-->
+    <div class="modal fade" id="robot" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Mr Robot</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="card" style="width: 90%; margin-top: 1rem; margin-left: 1rem; margin-right: 1rem">
+              <img src="robot.jpg" class="card-img-top" >
+              <div class="card-body">
+                <h5 class="card-title">Mr Robot</h5>
+                <p class="card-text">Mr. Robot se centra en un joven programador, Elliot, que sufre de un trastorno antisocial debilitante y decide que sólo puede conectar con la gente a través de la piratería. Él maneja sus habilidades como un arma para proteger a las personas que le importan, trabajando como ingeniero de seguridad cibernética de día y como hacker de noche. Esta situación pondrá a Elliot en la disyuntiva de elegir entre una firma de seguridad cibernética para la que trabaja o apoyar a las organizaciones de los bajos fondos que le quieren reclutar para derribar la América corporativa.</p>
+                <a href="https://www.primevideo.com/detail/0ND5POOAYD6A4THTH7C1TD3TYE/ref=atv_dp_season_select_s1?language=es_ES" class="btn btn-primary a1" >Ver serie</a>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+      </div>
+      </div>
+    </div>
+  
+
+      <!-- Modal rick-->
+      <div class="modal fade" id="rick" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Rick and Morty</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="card" style="width: 90%; margin-top: 1rem; margin-left: 1rem; margin-right: 1rem">
+                <img src="rick.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Rick and Morty</h5>
+                  <p class="card-text">La serie sigue las desventuras de un científico, Rick, y su fácilmente influenciable nieto, Morty, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e intergalácticos.</p>
+                  <a href="https://www.netflix.com/title/80014749" class="btn btn-primary a1" >Ver serie</a>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Modal breaking-->
+      <div class="modal fade" id="breaking" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Breaking Bad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="card" style="width: 90%; margin-top: 1rem; margin-left: 1rem; margin-right: 1rem">
+                <img src="breaking.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Breaking Bad</h5>
+                  <p class="card-text">Breaking Bad (The Breaking Bad) es una serie de televisión estadounidense creada en 2008 por Vince Gilligan. Fue emitida por la cadena AMC y protagonizada por Bryan Cranston, quien interpreta a un químico que se involucra en el mundo del tráfico de drogas para asegurar el futuro económico de su familia.</p>
+                  <a href="https://www.netflix.com/title/70143836" class="btn btn-primary a1" >Ver serie</a>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+      </div>
+  </body>
+
+
+  <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+    <script>
+        var myModal = document.getElementById('myModal')
+            var myInput = document.getElementById('myInput')
+            myModal.addEventListener('shown.bs.modal', function () {
+            myInput.focus()
+            })
+    </script>
+</html>

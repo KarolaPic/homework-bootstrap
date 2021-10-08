@@ -1,0 +1,1 @@
+Hola toñito, sorry por no darle formato tan bonito, he tenido un buen de tarea,agregando las de scio, perdón :c aunque la tarea cumple con el objetivo
